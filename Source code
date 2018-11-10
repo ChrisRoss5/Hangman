@@ -93,6 +93,9 @@ def check_answer(text, start=None, stop=None, condition=None):  # CHECKING IF US
                 answer = input(text)
                 if answer == "n":
                     return "n"
+                elif len(" ".join(answer).split()) == 0:
+                    print("Sorry, but you must enter something.")
+                    continue
                 else:
                     try:
                         answer = [int(x) - 1 for x in answer.split()]
